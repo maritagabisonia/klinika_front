@@ -1,0 +1,10 @@
+<div *ngIf="doctors.length > 0; else noDoctors">
+  <div class="doctor-list">
+    <app-doctor-card *ngFor="let doctor of doctors" [doctor]="doctor"></app-doctor-card>
+  </div>
+</div>
+
+<ng-template #noDoctors>
+  <p>No doctors available.</p>
+</ng-template>
+

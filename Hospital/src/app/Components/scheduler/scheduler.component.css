@@ -1,0 +1,61 @@
+/* scheduler.component.css */
+.scheduler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.header button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 5px;
+}
+
+.hour {
+  background-color: #f0f0f0;
+}
+
+.time-slot {
+  cursor: pointer;
+  position: relative;
+}
+
+.time-slot.taken {
+  background-color: #f44336;
+  color: white;
+}
+
+.time-slot.has-event {
+  background-color: #2196F3;
+  color: white;
+}
+
+.event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

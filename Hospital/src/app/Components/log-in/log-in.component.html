@@ -1,0 +1,16 @@
+<div class="container">
+<form [formGroup]="LogInForm"  >
+<p-floatLabel class="form-field">
+    <input pInputText id="email" formControlName="email" />
+    <label for="email">email</label>
+</p-floatLabel>
+<p-floatLabel class="form-field">
+    <input pInputText id="password" formControlName="password"  />
+    <label for="password">password</label>
+</p-floatLabel>
+<p-button label="Submit" (click)="login()"/>
+</form>
+
+
+</div>
+

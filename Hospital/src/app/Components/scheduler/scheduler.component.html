@@ -1,0 +1,28 @@
+<div class="scheduler">
+  <div class="header">
+    <button (click)="previous()">&#8249;</button>
+    <span>{{ viewDate | date: 'MMMM yyyy' }}</span>
+    <button (click)="next()">&#8250;</button>
+  </div>
+  <table class="calendar">
+    <thead>
+      <tr>
+        <th></th>
+        <th *ngFor="let day of week">{{ day.label }}<br>{{ day.date | date: 'dd' }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hour of hours">
+        <td class="hour">{{ hour }}</td>
+        <td *ngFor="let day of week" 
+            class="time-slot" 
+            [ngClass]="{'taken': isTimeSlotTaken(day.date, hour), 'has-event': getEventsForDayAndHour(day.date, hour).length > 0}" 
+            (click)="!getEventsForDayAndHour(day.date, hour).length && onTimeSlotClick(day.date, hour)">
+          <div *ngFor="let event of getEventsForDayAndHour(day.date, hour)" class="event">
+            <!-- Event content can be added here if needed -->
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

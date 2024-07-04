@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    margin-bottom: 20px; /* Optional: additional spacing */
+  }
+ 
+  
+  .cursor-pointer {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+ 

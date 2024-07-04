@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card">
+      <p-tabMenu [model]="itemss"></p-tabMenu>
+    </div>
+    <p-breadcrumb class="custom-breadcrumb" [model]="items" ngSkipHydration>
+      <ng-template pTemplate="item" let-item>
+        <a class="cursor-pointer" [routerLink]="item.url">
+          {{ item.label }}
+        </a>
+      </ng-template>
+      <ng-template pTemplate="separator"> / </ng-template>
+    </p-breadcrumb>
+    <p-selectButton 
+    [options]="stateOptions" 
+    [(ngModel)]="value" 
+    optionLabel="label" 
+    optionValue="value" 
+    (ngModelChange)="onValueChange($event)"/>
+</div>
+  
