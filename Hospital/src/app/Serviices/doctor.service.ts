@@ -13,7 +13,6 @@ export class DoctorService {
   constructor(private http: HttpClient) { }
 
   getDoctors(pageNumber: number, rowsPerPage: number): Observable<any> {
-    console.log("request was called")
     let params = new HttpParams()
       .set('pageNumber', pageNumber.toString())
       .set('rowsPerPpage', rowsPerPage.toString());

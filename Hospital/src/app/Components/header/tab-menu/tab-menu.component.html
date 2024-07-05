@@ -10,11 +10,7 @@
       </ng-template>
       <ng-template pTemplate="separator"> / </ng-template>
     </p-breadcrumb>
-    <p-selectButton 
-    [options]="stateOptions" 
-    [(ngModel)]="value" 
-    optionLabel="label" 
-    optionValue="value" 
-    (ngModelChange)="onValueChange($event)"/>
+    
+    <button (click)="toggleValue()">Eng</button>
 </div>
   

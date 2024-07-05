@@ -10,11 +10,6 @@ import { CategoriesComponent } from '../../Components/categories/categories.comp
   styleUrl: './main-page.component.css'
 })
 export class MainPageComponent {
-  sharedValue: string = 'eng';
 
-  onValueChange(newValue: string) {
-    this.sharedValue = newValue;
-    console.log(this.sharedValue)
-  }
 
 }

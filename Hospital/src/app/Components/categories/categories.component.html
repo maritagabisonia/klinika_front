@@ -2,7 +2,7 @@
 <p-table  [value]="categories" [tableStyle]="{'min-width': '50rem'}">
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th>Category</th>
+            <th>{{this.translateService.Dictionary['categories']}}</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product let-columns="columns">

@@ -13,7 +13,6 @@ export class AppoitmensService {
   constructor(private http: HttpClient) { }
 
   getDoctorAppoitments(id: number): Observable<Event[]> {
-    console.log(id)
 
     let httpOptions = {
       headers: new HttpHeaders({ "Content-Type": "application/json" })
