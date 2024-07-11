@@ -9,6 +9,7 @@ import { customInterceptor } from './Serviices/custom.interceptor';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    provideHttpClient(),
     provideClientHydration(),
     provideHttpClient(withInterceptors([customInterceptor])),
   ]

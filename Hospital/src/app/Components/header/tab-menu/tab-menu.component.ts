@@ -65,7 +65,7 @@ export class TabMenuComponent implements OnInit {
     ];
     this.items = [
       { label: this.translateService.Dictionary['signIn'], url: 'logIn'},
-      { label:this.translateService.Dictionary['signUp'], url: '' }
+      { label:this.translateService.Dictionary['signUp'], url: 'register' }
   ];
 
   }
